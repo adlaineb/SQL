@@ -1,0 +1,35 @@
+/** ALB STORE:
+
+Shirts (20)
+Sweaters (12)
+Pants (20)
+Shorts (10)
+Dresses (5)
+Skirts (4)
+Boots (7)
+Tennis Shoes (5)
+Plants (15)
+**/
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, season TEXT, quantity INTEGER, PRICE INTEGER);
+
+INSERT into clothing  VALUES (1, "SHIRTS" , "SUMMER", 20, 15.99);
+INSERT into clothing VALUES (2, "SWEATERS", "WINTER", 12, 20.99);
+INSERT into clothing VALUES (3, "PANTS" , "WINTER", 20, 21.99);
+INSERT INTO CLOTHING VALUES (4, "SHORTS", "SUMMER", 10, 15.99);
+INSERT INTO CLOTHING VALUES (5, "DRESSES", "SUMMER" , 5, 12.00);
+INSERT INTO CLOTHING VALUES (6, "SKIRTS", "SUMMER", 5, 10.00);
+INSERT INTO CLOTHING VALUES (7, "BOOTS", "WINTER", 4, 30.99);
+INSERT INTO CLOTHING VALUES (8, "TENNIS SHOES", "BOTH", 5, 20.99);
+INSERT INTO CLOTHING VALUES (9, "PLANTS" , " BOTH" , 15, 8.99);
+SELECT * FROM clothing
+ORDER BY price desc; 
+
+SELECT AVG(price) "avg winter clothing price"
+FROM clothing
+where season='WINTER'; 
+
+display the database ordered by price:
+SELECT * FROM clothing
+ORDER BY price desc;
+
